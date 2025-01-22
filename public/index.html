@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicatie Disertatie</title>
+    <link rel="icon" type="image/x-icon" href="disertatie_favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplicație Disertație</h1>
+
+        <!-- sectiunea de autentificare -->
+        <section id="authSection">
+            <h2>Autentificare</h2>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Parolă" required>
+                <button type="submit">Autentifică-te</button>
+            </form>
+        </section>
+
+        <!-- sectiunea pentru studenti -->
+        <section id="studentSection" style="display: none;">
+            <h2>Bun venit, student!</h2>
+            <h3>Aplică pentru sesiuni</h3>
+            <form id="applyForm">
+                <select id="sessionSelect" required>
+                    <option value="">Alege sesiune</option>
+                </select>
+                <button type="submit">Aplică pentru sesiune</button>
+            </form>
+
+            <h3>Încărcați fișierul (după aprobare)</h3>
+            <input type="file" id="fileInput">
+            <button id="uploadButton">Încarcă cererea semnată</button>
+        </section>
+
+        <!-- sectiunea pentru profesori -->
+        <section id="professorSection" style="display: none;">
+            <h2>Bun venit, profesor!</h2>
+            <h3>Gestionare Cereri Studenți</h3>
+            <div id="applicationsList"></div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
